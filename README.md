@@ -165,3 +165,5 @@ While we cannot provide all Python codes for system testing due to confidentiali
 While this development is designed to meet low-latency requirements, we propose that even lower latency times could be achieved with a more suitable test system. For example, in a 10Gbps environment, latency numbers have the potential to be reduced by a factor of 10. Therefore, we highly recommend that individuals interested in researching this field acquire an appropriate test environment.
 
 It is worth noting that although the FIX protocols have become obsolete for the SET stock exchange, which introduced the Nasdaq-based ITCH and OUCH protocols, we believe that this prototype can still be beneficial for researching in network optimisation using FPGAs, hardware design, and further development of time-sensitive requirements in the financial sector.
+
+Thank you for your participation in this project, and we hope that you can put our work to good use.
