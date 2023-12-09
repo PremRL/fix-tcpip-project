@@ -166,7 +166,7 @@ Package Body PkTbAscii2Bin Is
 		signal      rDataNegExp 		: In	std_logic_vector( 2 downto 0 )
 	) Is
 		variable	vDataInteger	: Integer range 0 to 134217727 := 0;
-		variable	vDataNegExp	 	: std_logic_vector( 1 downto 0 ) := "00";
+		variable	vDataNegExp	 	: std_logic_vector( 2 downto 0 ) := "000";
 		variable 	vNegExpCntEn	: std_logic := '0';
 		variable    tClk			: time 		:= 10 ns;
 	Begin

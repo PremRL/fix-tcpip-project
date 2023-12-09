@@ -71,7 +71,7 @@ Architecture HTWTestBench Of TbBin2Ascii Is
 	
 	signal  BinInStart_t		: std_logic;
 	signal  BinInDecPointEn_t	: std_logic;
-	signal  BinInNegativeExp_t	: std_logic_vector( 1 downto 0 );
+	signal  BinInNegativeExp_t	: std_logic_vector( 2 downto 0 );
 	signal  BinInData_t			: std_logic_vector(26 downto 0 );
 	
 	-- output 
