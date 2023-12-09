@@ -140,7 +140,7 @@ The method to run simulations is the same for all modules and relatively straigh
 
 <br />
 
-![simulation_example](./pictures/example_Ascii2Bin.png)
+![simulation_example](./pictures/example_Ascii2Bin.PNG)
 
 - Open ModelSim and change the directory to '../hdl/FIX/sim'.
 - Enter 'do runAscii2Bin.do' in the ModelSim's terminal.
