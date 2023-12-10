@@ -61,14 +61,14 @@ Overall, the FIX processor is designed to connect to the TCP/IP offload engine o
 Specifically, all FIX messages are communicated in ASCII strings and therefore, it is essential to be able to handle these string types. To manage resource usage efficiently, our design includes an ASCII-to-Binary decoder and a Binary-to-ASCII encoder for string-based messages, described as follows:
 
 - Ascii2Bin - Converts an integer in the form of an ASCII string to binary, with a maximum binary size of 26 bits.
-- Ascii2Bin16Bit - Similar to the above, but reduces the data width output to 16 bits for optimised resource useage.
+- Ascii2Bin16Bit - Similar to the above, but reduces the data width output to 16 bits for optimised resource usage.
 - Bin2Ascii - Encodes a binary value to an ASCII string format.
 
 The three components in this FIX processor are explained in details, starting with "TxFixMsg" and its submodules, followed by "RxFix" and its sub-elements, and finally concluding with FIXCtrl and its definition.
 
 ##### TxFixMsg
 - MuxEncoder - Contains two Bin2Ascii encoders and can be shared and employed by both "TxFixMsgGen" and "TxFixMsgCtrl".
-- TxFixMsgGen - Forms a FIX message requested by "TxFixMsgGen" with a certain number of supported message types and contains pre-assigned ROM for some constant fields in FIX messages.    
+- TxFixMsgGen - Forms a FIX message requested by "TxFixMsgCtrl" with a certain number of supported message types and contains pre-assigned ROM for some constant fields in FIX messages.    
 - RAM - Used as an intermediate buffer for storing a preparing FIX message before sending out by "TxFixMsgCtrl".
 - TxFixMsgCtrl - Controls the other modules and data flow of the transmit function and interfaces with the main controller of this FIX design.
 
@@ -106,7 +106,7 @@ Three main components, namely TxTCPIP, RxTCPIP and TPUTCPIP, comprise the engine
 
 ##### TxTCPIP
 - Queue - Manages data received from the upper layer in the transmit path, controlled by the TPU for reading data, searching contents and sending a TCP payload.
-- ChecksumCal and RAM - Used for calculating a 16-bit checksum for the TCP/IP protocol, serving as an intermediate buffer to store the TCP payload during the calculation.
+- CheckSumCal and RAM - Used for calculating a 16-bit checksum for the TCP/IP protocol, serving as an intermediate buffer to store the TCP payload during the calculation.
 - TCPHdGen and IPHdGen - Contain a certain number of registers and have an RAM interface for writing a TCP/IP header necessary for the packet being sent.
 - TxOutCtrl - Selects data from multiple sources, organises them into a TCP/IP format before transmitting to the Ethernet system.  
 
@@ -133,14 +133,14 @@ The method to run simulations is the same for all modules and relatively straigh
 1. Open the ModelSim tool and change the directory to '../sim'. In this directory, you will find two types of files:
   - 'run.do' - Used to compile and run the simulation.
   - 'wave.do' - Adds the waveform of the running HDL sources into the simulation.
-2. In the ModelSim terminal (Transcript), enter 'do run.do' to run the simulation. Additionally, simulations for submodules of the FIX processor are provided and they can be run using commands like 'do run<suffix>.do', where <suffix> is the HDL source name.
+2. In the ModelSim terminal (Transcript), enter 'do run.do' to run the simulation. Additionally, simulations for submodules of the FIX processor are provided and they can be run using commands like 'do run\<suffix\>.do', where \<suffix\> is the HDL source name.
 3. After successfully running the simulation, the message '##### End Simulation #####' will be displayed on the terminal, and waveform can be viewed using the tool.
 
 ##### Example of running Ascii2Bin
 
 <br />
 
-![simulation_example](./pictures/example_Ascii2Bin.PNG)
+![simulation_example](./pictures/sim_example_Ascii2Bin.png)
 
 - Open ModelSim and change the directory to '../hdl/FIX/sim'.
 - Enter 'do runAscii2Bin.do' in the ModelSim's terminal.
@@ -160,7 +160,7 @@ The Ethernet system is used to handle the low-layer protocols, which are data li
 
 While we cannot provide all Python codes for system testing due to confidentiality issues, some codes are included in this repository. We encourage you to use these codes as a starting point and build upon them to develop a comprehensive testing system.
 
-## Sugguestion
+## Suggestion
 
 While this development is designed to meet low-latency requirements, we propose that even lower latency times could be achieved with a more suitable test system. For example, in a 10Gbps environment, latency numbers have the potential to be reduced by a factor of 10. Therefore, we highly recommend that individuals interested in researching this field acquire an appropriate test environment.
 
