@@ -3,15 +3,15 @@
 This project, undertaken as part of the final-year requirements for the electrical engineering program (EE2102499) at Chulalongkorn University in the academic year 2020, concentrates on digital hardware design, specifically FPGA, with a keen focus on optimising network protocols. Our efforts resulted in the development of a FIX processor for SET Market Data and a TCP/IP offload engine for 1Gbps Ethernet. If you are intrigued by our work and intend to explore further, our publication titled ['Design and Implementation of a FIX Protocol Offload Engine for SET Market Data'](https://ieeexplore.ieee.org/abstract/document/10127033) is available through the hyperlink.
 
 ### Contributors  
-1. Mr. Norawit Kietthanakorn <br />
+1. [Norawit Kietthanakorn](https://github.com/Noarwit-K) <br />
    Department of Electrical Engineering, Chulalongkorn University, Bangkok, Thailand <br />
    Email: Norawit.m@gmail.com
 
-2. Mr. Ratchanon Leung-on <br />
+2. [Ratchanon Leung-on](https://github.com/PremRL) <br />
    Department of Electrical Engineering, Chulalongkorn University, Bangkok, Thailand <br />
    Email: ratchanonleung.on@gmail.com
 
-4. Mr. Boonchuay Supmonchai (Project advisor) <br />
+3. [Boonchuay Supmonchai](https://ee.eng.chula.ac.th/boonchuay-supmonchai/) (Project advisor) <br />
    Department of Electrical Engineering, Chulalongkorn University, Bangkok, Thailand <br />
    Email: boonchuay.s@chula.ac.th
 
